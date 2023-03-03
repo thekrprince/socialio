@@ -1,6 +1,13 @@
 const express = require('express');
+const { default: mongoose } = require('mongoose');
+const connectDB = require('./config/db');
 
 const app = express();
+
+mongoose.set('strictQuery', false);
+
+// Connect Database
+connectDB();
 
 const PORT = process.env.PORT || 4000;
 
