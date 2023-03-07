@@ -9,10 +9,12 @@
   "author": "Kumar Prince",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "config": "^3.3.9",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-validator": "^6.15.0",
+    "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.10.0"
   }
 }
