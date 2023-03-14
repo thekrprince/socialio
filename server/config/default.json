@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://princekr700:w2uek0cS7PAMzl9d@socialio.dkgxpkq.mongodb.net/?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://princekr700:w2uek0cS7PAMzl9d@socialio.dkgxpkq.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken"
 }
