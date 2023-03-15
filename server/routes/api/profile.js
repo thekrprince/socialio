@@ -96,7 +96,7 @@ router.post(
       res.status(500).send('Server Error');
     }
 
-    res.send(profileFields);
+    return res.send(profileFields);
   }
 );
 
@@ -130,6 +130,25 @@ router.get('/user/:user_id', async (req, res) => {
     if (error.kind == 'ObjectId') {
       return res.status(400).json({ msg: 'Profile not found' });
     }
+    return res.status(500).send('Server Error');
+  }
+});
+
+// @route     DELETE api/profile/user/:user_id
+// @desc      Delete profile by id
+// @access    Private
+router.delete('/', auth, async (req, res) => {
+  try {
+    // Remove profile
+    await Profile.findOneAndRemove({
+      user: req.user.id,
+    });
+    // Remove user
+    await User.findOneAndRemove({ _id: req.user.id });
+
+    res.json({ msg: 'User deleted' });
+  } catch (error) {
+    console.error(error.message);
     return res.status(500).send('Server Error');
   }
 });
