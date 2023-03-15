@@ -90,13 +90,13 @@ router.post(
       profile = new Profile(profileFields);
 
       await profile.save();
-      res.json(profile);
+      return res.json(profile);
     } catch (error) {
       console.error(error.message);
       res.status(500).send('Server Error');
     }
 
-    return res.send(profileFields);
+    res.send(profileFields);
   }
 );
 
