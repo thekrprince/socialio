@@ -2,10 +2,13 @@
 const Registration = () => {
     return (
         <form>
-            <div>First Name</div>
-            <div>Last Name</div>
-            <div>Mobile Number Or Email Id</div>
-            <div>Password</div>
+            <label htmlFor="anem">Name</label>
+            <input type="text" name="name"/>
+            <label htmlFor="email">Email Id</label>
+            <input type="text" name="email" id="" />
+            <label>Password</label>
+            <input type="text" />
+            <button>Submit</button>
         </form>
         
     );
