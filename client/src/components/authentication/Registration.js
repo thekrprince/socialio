@@ -1,8 +1,12 @@
-
+I
 const Registration = () => {
+    const [named, Setname] = useState('')
+    const submit = () =>{
+        
+    };
     return (
-        <form>
-            <label htmlFor="anem">Name</label>
+        <form onclick={submit}>
+            <label htmlFor="name">Name</label>
             <input type="text" name="name"/>
             <label htmlFor="email">Email Id</label>
             <input type="text" name="email" id="" />
