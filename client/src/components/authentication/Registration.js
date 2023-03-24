@@ -1,11 +1,17 @@
-I
+import React, { useState } from 'react';
+
+
 const Registration = () => {
-    const [named, Setname] = useState('')
-    const submit = () =>{
+    const [name, Setname] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = (event) =>{
+        event.prevenDefault();
         
     };
     return (
-        <form onclick={submit}>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name</label>
             <input type="text" name="name"/>
             <label htmlFor="email">Email Id</label>
