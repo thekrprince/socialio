@@ -1,0 +1,46 @@
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
+}
+.container {
+    
+    width: 35%;
+    height: 40%;
+    position: absolute;
+    border: 1px solid;
+    background-color: white;
+    padding: 40px;
+    display: flex;
+    right: 7%;
+    bottom: 10%;
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+    margin: 100px;
+    border-radius: 10% 0% 0% 10%;
+    /* border-radius: 60px / 10px; */
+}
+
+/* .test{
+    display: block;
+}
+.test1 {
+    display: inline;
+} */
+
+.input-div{
+    padding: 20px;
+}
+input {
+    /* display: flex; */
+    /* justify-content: right; */
+    width: 120%;
+    padding: 9px;
+
+}
+
+.button {
+    position: absolute;
+    right: 20%;
+}
