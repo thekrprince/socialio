@@ -44,8 +44,8 @@ body{
 } */
 
 .container {  
-    width: 75vw;
-    height: 37vh; 
+    width: 80vw;
+    height: 40vh; 
     /* position: absolute; */
     border: 1px solid;
     background-color: white;
@@ -59,7 +59,8 @@ body{
     justify-content: center; */
     /* margin: 10rem; */
     /* border-radius: 10% 0% 0% 10%; */
-    border-radius: 42% 0% 0% 42%;
+    /* border-radius: 33% 0% 0% 33%; */
+    border-radius: 0px 86px 0px 86px;
     /* border-radius: 60px / 10px; */
 }
 
@@ -70,6 +71,7 @@ body{
 
 .container-name{
     font-size: 20px;
+    color: rgb(104, 73, 31);
 }
 /* .test{
     display: block;
