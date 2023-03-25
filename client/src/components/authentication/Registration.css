@@ -25,6 +25,7 @@ body{
     bottom: 20rem; */
     margin: 20%;
     color: white;
+    
 }
 
 /* .arrow-icon {
@@ -43,12 +44,22 @@ body{
     left: 3rem;
 } */
 
+.aboutUsButton {
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    background-color: var(--white);
+    color: var(--regis-page-color) ;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
 .container {  
     width: 80vw;
     height: 42vh; 
     /* position: absolute; */
     border: 1px solid;
-    background-color: white;
+    background-color: var(--white);
     
     /* padding: 20px; */
     /* display: flex; */
@@ -72,7 +83,7 @@ body{
 
 .container-name{
     font-size: 20px;
-    color: rgb(104, 73, 31);
+    color: var(--regis-page-color);
 }
 /* .test{
     display: block;

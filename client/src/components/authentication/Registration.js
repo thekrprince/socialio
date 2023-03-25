@@ -47,7 +47,7 @@ const Registration = () => {
         <h4 className="heading-slogan">
           Connect With New People <SlPeople />
         </h4>
-        <button>About US</button>
+        <button className="aboutUsButton">About US</button>
       </div>
 
       <form onSubmit={handleSubmit} className="form-container">
