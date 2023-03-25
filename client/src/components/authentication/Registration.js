@@ -38,48 +38,55 @@ const Registration = () => {
       });
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <div className="registration-container">
       <div className="social-intro">
-        <span className="arrow-icon"><FaAngleDoubleDown /></span>
-        <h1>SOCIAL IO </h1>
-        <h2>Connect With New People <SlPeople/></h2>
+        <span className="arrow-icon">
+          <FaAngleDoubleDown size={70} />
+        </span>
+        <h1 className="heading">SOCIAL IO </h1>
+        <h4 className="heading-slogan">
+          Connect With New People <SlPeople />
+        </h4>
+        <button>About US</button>
       </div>
-      <div className="container">
-        <div className="conatiner-name-top">
-          <h1 className="container-name">Register Here</h1>
-          <div className="div-inner-container">
-            <div className="input-div">
-              {/* <label htmlFor="name">Name</label> */}
-              <input
-                type="text"
-                name="name"
-                onChange={handleChange}
-                placeholder="Name"
-              />
+
+      <form onSubmit={handleSubmit} className="form-container">
+        <div className="container">
+          <div className="conatiner-name-top">
+            <h1 className="container-name">Register Here</h1>
+            <div className="div-inner-container">
+              <div className="input-div">
+                {/* <label htmlFor="name">Name</label> */}
+                <input
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  placeholder="Name"
+                />
+              </div>
+              <div className="input-div">
+                {/* <label htmlFor="email">Email Id</label> */}
+                <input
+                  type="text"
+                  name="email"
+                  onChange={handleChange}
+                  placeholder="Email"
+                />
+              </div>
+              <div className="input-div">
+                <input
+                  type="password"
+                  name="password"
+                  onChange={handleChange}
+                  placeholder="Password"
+                />
+              </div>
+              <button className="button">Register</button>
             </div>
-            <div className="input-div">
-              {/* <label htmlFor="email">Email Id</label> */}
-              <input
-                type="text"
-                name="email"
-                onChange={handleChange}
-                placeholder="Email"
-              />
-            </div>
-            <div className="input-div">
-              {/* <label>Password</label> */}
-              <input
-                type="password"
-                name="password"
-                onChange={handleChange}
-                placeholder="Password"
-              />
-            </div>
-            <button className="button">Register</button>
           </div>
         </div>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 };
 
