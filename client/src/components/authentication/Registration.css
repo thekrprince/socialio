@@ -3,23 +3,39 @@ body{
     height: 100vh;
     background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
 }
-.container {
-    
-    width: 35%;
-    height: 40%;
+
+.social-intro{
+    position: absolute;
+    left: 20%;
+    bottom: 50%;
+    color: white;
+}
+
+.arrow-icon {
+    width: 1000px;
+    height: 500px;
+}
+
+.container {  
+    width: 40vw;
+    height: 50vh;
     position: absolute;
     border: 1px solid;
     background-color: white;
-    padding: 40px;
+    /* padding: 20px; */
     display: flex;
-    right: 7%;
-    bottom: 10%;
+    right: -4%;
+    bottom: 5%;
     /* text-align: center; */
-    align-items: center;
-    justify-content: center;
-    margin: 100px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    margin: 10rem;
     border-radius: 10% 0% 0% 10%;
     /* border-radius: 60px / 10px; */
+}
+
+.conatiner-name-top {
+    padding-left: 10%;
 }
 
 /* .test{
@@ -30,17 +46,17 @@ body{
 } */
 
 .input-div{
-    padding: 20px;
+    padding: 20px 0px 20px 0px;
 }
-input {
+.input-div input {
     /* display: flex; */
     /* justify-content: right; */
-    width: 120%;
-    padding: 9px;
+    width: 30vw;
+    padding: 10px;
 
 }
 
 .button {
     position: absolute;
-    right: 20%;
+    right: 4rem;
 }
