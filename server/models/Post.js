@@ -10,7 +10,7 @@ const PostSchema = new Schema({
     type: String,
     required: true,
   },
-  postName: {
+  name: {
     type: String,
   },
   likes: [
