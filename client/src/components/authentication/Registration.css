@@ -3,6 +3,7 @@ body{
     background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
 }
 
+/* Mobile view */
 .registration-container{
     display: flex;
     flex-direction: column;
@@ -70,19 +71,19 @@ body{
     font-size: 15px;
 }
 
+/* Web View */
 @media screen and (min-width:700px){
     .registration-container {
-        /* display: block; */
         flex-direction: row;
-        padding-top: 10%;
+        padding-top: 12%;
     }
     .social-intro{
-        width: 50%;
+        width: 40%;
         margin: 0%;
     }
     .container {  
-        width: 30vw;
-        height: 48vh; 
+        width: 120%;
+        height: 60%; 
     }
 
     .input-div{
@@ -92,6 +93,9 @@ body{
         width: 25vw;
         padding: 10px;
     
+    }
+    .button{
+        margin-bottom: 10px;
     }
   
 }
