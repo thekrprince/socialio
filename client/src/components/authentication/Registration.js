@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Registration.css";
 import { FaAngleDoubleDown } from "react-icons/fa";
-// import { BsFillEmojiWinkFill, BsFillEmojiHeartEyesFill } from "react-icons/bs"
-// import { IoPeopleCircle } from "react-icons/io";
 import { SlPeople } from "react-icons/sl";
 
 const baseURL = "http://localhost:4000/api/users";
@@ -50,13 +48,12 @@ const Registration = () => {
         <button className="aboutUsButton">About US</button>
       </div>
 
-      <form onSubmit={handleSubmit} className="form-container">
+      <form onSubmit={handleSubmit}>
         <div className="container">
           <div className="conatiner-name-top">
             <h1 className="container-name">Register Here</h1>
             <div className="div-inner-container">
               <div className="input-div">
-                {/* <label htmlFor="name">Name</label> */}
                 <input
                   type="text"
                   name="name"
@@ -65,7 +62,6 @@ const Registration = () => {
                 />
               </div>
               <div className="input-div">
-                {/* <label htmlFor="email">Email Id</label> */}
                 <input
                   type="text"
                   name="email"
