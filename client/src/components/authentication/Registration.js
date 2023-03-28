@@ -25,24 +25,23 @@ const Registration = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if(inputChange.name === ''){
-      toast.error("User Name cann't not be blank!😞",{
+    if((inputChange.name.trim() === '')) {
+      toast.error("User Name can't be empty or should not have special chars!😞",{
         position: "top-center",
       } );
-    }else if(inputChange.email === '') {
-      toast.error("Email can't be blank!😞",{
+    }
+    else if((inputChange.email.trim() === '') || (!(inputChange.email.includes('@')))) {
+      toast.error("Please provide a valid Email Id!😞",{
         position: "top-center",
       });
     }
-    else if(inputChange.password === ''){
-      toast.error("Password can't be blank!😞",{
+    else if((inputChange.password.trim() === '') || (inputChange.password.length <= 6)) {
+      toast.error("Password can't be empty or less than 5 chars!😞",{
         position: "top-center",
       });
     }
-
-    
-
-    axios
+    else{
+      axios
       .post(baseURL, {
         name: inputChange.name,
         email: inputChange.email,
@@ -53,12 +52,14 @@ const Registration = () => {
         toast.success("You have Sucessfully Registered with SocialIO 💐!",{
           position: "top-center"
          });
-        event.target.reset();
         
       })
       .catch((err) => {
         console.log("server response with error", err);
       });
+    }
+    event.target.reset();
+    
   };
 
   return (
