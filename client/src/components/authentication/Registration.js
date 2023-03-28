@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./Registration.css";
-import "react-toastify/dist/ReactToastify.css";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 
@@ -14,7 +14,6 @@ const Registration = () => {
     email: "",
     password: "",
   });
-  const [successfullyRegistered, setSuccessfullyRegistered] = useState(false);
 
   const handleChange = (e) => {
     setInputChange({
@@ -36,6 +35,7 @@ const Registration = () => {
         console.log("server response", res);
         toast.success("You have Sucessfully Registered with SocialIO 💐!");
         event.target.reset();
+        
       })
       .catch((err) => {
         console.log("server response with error", err);
@@ -91,12 +91,8 @@ const Registration = () => {
           </div>
         </form>
       </div>
-      {/* <p>
-        Already Have an account?
-        <span className="span-switch">Sign In</span>
-      </p> */}
       <ToastContainer />
-    </>
+      </>
   );
 };
 
