@@ -25,6 +25,23 @@ const Registration = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    if(inputChange.name === ''){
+      toast.error("User Name cann't not be blank!😞",{
+        position: "top-center",
+      } );
+    }else if(inputChange.email === '') {
+      toast.error("Email can't be blank!😞",{
+        position: "top-center",
+      });
+    }
+    else if(inputChange.password === ''){
+      toast.error("Password can't be blank!😞",{
+        position: "top-center",
+      });
+    }
+
+    
+
     axios
       .post(baseURL, {
         name: inputChange.name,
@@ -33,7 +50,9 @@ const Registration = () => {
       })
       .then((res) => {
         console.log("server response", res);
-        toast.success("You have Sucessfully Registered with SocialIO 💐!");
+        toast.success("You have Sucessfully Registered with SocialIO 💐!",{
+          position: "top-center"
+         });
         event.target.reset();
         
       })
