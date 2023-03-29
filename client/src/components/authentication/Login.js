@@ -23,7 +23,7 @@ const Login = () => {
                     placeholder="Password"
                   />
                 </div>
-                <button className="button">Register</button>
+                <button className="button">Login</button>
         </div>
 
     );
