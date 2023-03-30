@@ -16,12 +16,12 @@ function App() {
         <Login/>
       )
     },
-    // {
-    //     path: "/",
-    //     element: (
-    //       <Login/>
-    //     )
-    // }
+    {
+        path: "/",
+        element: (
+          <Login/>
+        )
+    }
     ],
   ) ;
 
