@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./Registration.css";
+import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 
@@ -107,6 +107,7 @@ const Registration = () => {
                   />
                 </div>
                 <button className="button">Register</button>
+                <p>Have an account??&nbsp;<a href="/login"> Log in now</a></p>
               </div>
             </div>
           </div>

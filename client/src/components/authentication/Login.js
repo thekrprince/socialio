@@ -1,6 +1,6 @@
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./Registration.css";
+import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 const Login = () => {
@@ -45,6 +45,8 @@ const Login = () => {
                     />
                   </div>
                   <button className="button">Login</button>
+                  <p>Don't have an account??&nbsp;
+                    <a href="/"> Register now</a></p>
                 </div>
               </div>
             </div>
