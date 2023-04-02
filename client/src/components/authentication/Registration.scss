@@ -15,8 +15,8 @@ body{
 .social-intro{                                                         
     margin: 20%;
     color: white;
-    align-items: center;
-    text-align: center;
+    // align-items: center;
+    // text-align: center;
     
 }
 
@@ -91,8 +91,8 @@ p a {
     .registration-container {
         flex-direction: row;
         padding-top: 14%;
-        align-items: center;
-        text-align: center;
+        align-items: normal;
+        // text-align: center;
     }
     .social-intro{
         width: 30%;
@@ -105,7 +105,7 @@ p a {
         position: relative;
         left: 50%;
         width: 100%;
-        height: 50%; 
+        height: 100%; 
         margin: 0px 10px 0px 10px;
         
     }
