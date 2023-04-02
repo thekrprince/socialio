@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Registration.scss";
@@ -46,7 +47,7 @@ const Login = () => {
                   </div>
                   <button className="button">Login</button>
                   <p>Don't have an account??&nbsp;
-                    <a href="/"> Register now</a></p>
+                    <Link to="/"> Register now</Link></p>
                 </div>
               </div>
             </div>

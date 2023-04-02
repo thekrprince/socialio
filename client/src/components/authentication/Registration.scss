@@ -71,6 +71,16 @@ body{
     font-size: 15px;
 }
 
+p {
+    color: var(--regis-page-color);
+}
+
+p a {
+    text-decoration: none;
+    color: #ed7b02;
+    font-weight:500;
+}
+
 /* Web View */
 @media screen and (min-width:700px){
     .registration-container {

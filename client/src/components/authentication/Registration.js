@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import "./Registration.scss";
@@ -107,7 +108,7 @@ const Registration = () => {
                   />
                 </div>
                 <button className="button">Register</button>
-                <p>Have an account??&nbsp;<a href="/login"> Log in now</a></p>
+                <p>Have an account??&nbsp;<Link to="/login"> Log in now</Link></p>
               </div>
             </div>
           </div>
