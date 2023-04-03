@@ -4,8 +4,8 @@ import Login from './components/authentication/Login';
 import Registration from './components/authentication/Registration';
 
 const router = createBrowserRouter([
-  {path: "/", element: <Registration/>},
-  {path: "/login", element: <Login/>},
+  {path: "/", element: <Login/>},
+  {path: "/registration", element: <Registration/>},
   ]);
 
 function App() {
