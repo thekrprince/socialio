@@ -9,6 +9,7 @@ import axios from "axios";
 
 const baseURL = "http://localhost:4000/api/auth";
 
+
 const Login = () => {
   const [fetchInputChangeValue, setFetchInputChangeValue] = useState({
     email: "",
@@ -21,14 +22,24 @@ const Login = () => {
       [event.target.name]: [event.target.value],
     });
   };
+  
+
   const inputChangeHandler = (e) => {
+    
     e.preventDefault();
-    axios.post(baseURL, {
-      email: fetchInputChangeValue.email,
-      password: fetchInputChangeValue.password,
-    }).then((res) => {
-      console.log("sucessfully loggedin", res);
+    axios
+     .post("http://localhost:4000/api/auth", {
+      email: fetchInputChangeValue.email.toString(),
+      password: fetchInputChangeValue.password.toString(),
+     }
+    )
+    .then((response) => {
+      console.log("server response", response);
+    })
+    .catch((err) => {
+      console.log("server response with error", err);
     });
+    
   };
 
   return (
