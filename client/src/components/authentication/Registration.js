@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import "./Registration.css";
+import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
-
-const baseURL = "http://localhost:4000/api/users";
+import { baseURL } from "../../API";
 
 const Registration = () => {
   const [inputChange, setInputChange] = useState({
@@ -41,8 +41,8 @@ const Registration = () => {
       });
     }
     else{
-      axios
-      .post(baseURL, {
+      baseURL
+      .post('/users', {
         name: inputChange.name,
         email: inputChange.email,
         password: inputChange.password,
@@ -56,7 +56,9 @@ const Registration = () => {
       })
       .catch((err) => {
         console.log("server response with error", err);
-        toast.error("User Already Exists. Please try with different Email Id!😊");
+        toast.error("User Already Exists. Please try with different Email Id!😊", {
+          position: "top-center"
+        });
       });
     }
     event.target.reset();
@@ -107,6 +109,7 @@ const Registration = () => {
                   />
                 </div>
                 <button className="button">Register</button>
+                <p>Have an account??&nbsp;<Link to="/"> Log in now</Link></p>
               </div>
             </div>
           </div>

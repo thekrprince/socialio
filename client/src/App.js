@@ -1,36 +1,19 @@
 import './App.css';
-import { RouterProvider, createHashRouter } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/authentication/Login';
 import Registration from './components/authentication/Registration';
-import { Children } from 'react';
+import CreatePost from './components/posts/CreatePost';
 
-
+const router = createBrowserRouter([
+  {path: "/", element: <Login/>},
+  {path: "/registration", element: <Registration/>},
+  {path: "/posts", element: <CreatePost/>},
+  ]);
 
 function App() {
-
-  // const router = createHashRouter([
-  //   {
-
-  //     path: "/",
-  //     element: (
-  //       <Registration/>
-  //     ),
-  //   children: [
-  //     {
-  //       path: "/",
-  //       element: (
-  //         <Registration/>
-  //       )
-  //     }
-  //   ]
-
-  //   }
-  // ]) ;
-
   return (
     <div className="App">
-      {/* <RouterProvider router={router}/> */}
-      <Registration/>
+      <RouterProvider router={router}/>
     </div>
   );
 }
