@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Registration.scss";
@@ -9,6 +9,9 @@ import { baseURL } from "../../API";
 
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
   const [fetchInputChangeValue, setFetchInputChangeValue] = useState({
     email: "",
     password: "",
@@ -33,13 +36,14 @@ const Login = () => {
     )
     .then((response) => {
       console.log("server response", response);
+      navigate('/posts');
     })
     .catch((err) => {
       toast("Invalid Credentials 🙅‍♀️", {
         position: 'top-center'
       });
     });
-    
+    e.target.reset();
   };
 
   return (
