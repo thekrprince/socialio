@@ -35,7 +35,9 @@ const Login = () => {
       console.log("server response", response);
     })
     .catch((err) => {
-      console.log("server response with error", err);
+      toast("Invalid Credentials 🙅‍♀️", {
+        position: 'top-center'
+      });
     });
     
   };

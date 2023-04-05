@@ -56,7 +56,9 @@ const Registration = () => {
       })
       .catch((err) => {
         console.log("server response with error", err);
-        toast.error("User Already Exists. Please try with different Email Id!😊");
+        toast.error("User Already Exists. Please try with different Email Id!😊", {
+          position: "top-center"
+        });
       });
     }
     event.target.reset();
