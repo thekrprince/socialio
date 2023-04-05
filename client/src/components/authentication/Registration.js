@@ -6,8 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
-
-const baseURL = "http://localhost:4000/api/users";
+import { baseURL } from "../../API";
 
 const Registration = () => {
   const [inputChange, setInputChange] = useState({
@@ -42,8 +41,8 @@ const Registration = () => {
       });
     }
     else{
-      axios
-      .post(baseURL, {
+      baseURL
+      .post('/users', {
         name: inputChange.name,
         email: inputChange.email,
         password: inputChange.password,

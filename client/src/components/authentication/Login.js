@@ -5,9 +5,7 @@ import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
 import { useState } from "react";
-import axios from "axios";
-
-const baseURL = "http://localhost:4000/api/auth";
+import { baseURL } from "../../API";
 
 
 const Login = () => {
@@ -27,8 +25,8 @@ const Login = () => {
   const inputChangeHandler = (e) => {
     
     e.preventDefault();
-    axios
-     .post("http://localhost:4000/api/auth", {
+    baseURL
+     .post('/auth', {
       email: fetchInputChangeValue.email.toString(),
       password: fetchInputChangeValue.password.toString(),
      }
