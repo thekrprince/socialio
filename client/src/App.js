@@ -5,9 +5,9 @@ import Registration from './components/authentication/Registration';
 import CreatePost from './components/posts/CreatePost';
 
 const router = createBrowserRouter([
-  {path: "/", element: <Login/>},
+  {path: "/login", element: <Login/>},
   {path: "/registration", element: <Registration/>},
-  {path: "/posts", element: <CreatePost/>},
+  {path: "/", element: <CreatePost/>},
   ]);
 
 function App() {
