@@ -1,16 +1,17 @@
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { baseURL } from "../../API";
 
 
 const Login = () => {
 
   const navigate = useNavigate();
+  
 
   const [fetchInputChangeValue, setFetchInputChangeValue] = useState({
     email: "",
@@ -23,6 +24,10 @@ const Login = () => {
       [event.target.name]: [event.target.value],
     });
   };
+
+  useEffect(() => {
+    sessionStorage.clear();
+  },[]);
   
 
   const inputChangeHandler = (e) => {
@@ -35,7 +40,8 @@ const Login = () => {
      }
     )
     .then((response) => {
-      console.log("server response", response);
+      const token = response.data.token;
+      sessionStorage.setItem('token', token);
       navigate('/posts');
     })
     .catch((err) => {
