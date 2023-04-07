@@ -4,9 +4,11 @@ import './Header.scss';
 const Header = () => {
   return (
     <div className="header_outer">
-        <input className="search" type="text" />
-        <BsSearch />
-        <button>Create Post</button>
+        <input className="search" type="text" placeholder="Search..." />
+        <BsSearch className="icon"/>
+        <button className="button">Create Post</button>
+        <button></button>
+        
     </div>
   );
 };
