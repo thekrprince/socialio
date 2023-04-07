@@ -33,7 +33,7 @@
     border: none;
     background-color: #ed7b02;
     padding: 10px 10px;
-    display: inline-block;
+    // display: inline-block;
     cursor: pointer;
     border-radius: 16px;
     color: white;
@@ -45,6 +45,14 @@
     height: 30px;
     border-radius: 50%;
     border: #ed7b02;
+    // position: relative;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    overflow-wrap: normal;
+    margin-left: 0.25rem;
+    margin-right: -10.25rem;
+    // left: 300px;
 
 }
 
