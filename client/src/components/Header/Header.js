@@ -3,6 +3,8 @@ import "./Header.scss";
 import icon_girl from "../../assets/icons-female-user.svg";
 
 const Header = () => {
+  
+
   return (
     <div className="header_outer">
       <input className="search" type="text" placeholder="Search..." />
