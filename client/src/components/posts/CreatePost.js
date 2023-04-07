@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Header from '../Header/Header';
 import "./CreatePost.scss";
 
 const CreatePost = () => {
@@ -13,6 +14,7 @@ const CreatePost = () => {
 
     return (
         <div>
+          <Header/>
           <div >Welcome to SocialIO</div>
           <Link to="/login">Logout</Link>
         </div>
