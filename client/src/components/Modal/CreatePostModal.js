@@ -1,6 +1,7 @@
 import React from "react";
 import { createPortal } from "react-dom";
 import Card from "../UI/Card";
+import "./CreatePostModal.scss";
 
 const Backdrop = ({ onConfirm }) => {
   return <div className="backdrop" onClick={onConfirm}></div>;
