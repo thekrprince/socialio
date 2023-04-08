@@ -42,6 +42,7 @@
     font-size: 8px;
     margin-left: 0.25rem;
     overflow-wrap: normal;
+    z-index: 1;
 }
 
 .profile_button {
@@ -68,6 +69,21 @@
     right: 378px;
 
 }
+
+.modal_portal{
+    width: clamp(50%, 700px, 90%);
+    height: min(50%, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: #FF9300;
+    margin: auto;
+  }
+
+
 
 @media screen and (min-width:600px) {
     
