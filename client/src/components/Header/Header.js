@@ -7,6 +7,11 @@ import Card from "../UI/Card";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const modalPostHandler = () => {
+    setIsOpen(true);
+  };
+
   return (
     <>
       <div className="header_outer">
@@ -23,25 +28,9 @@ const Header = () => {
             <img src={icon_girl} alt="profile" className="profile_icon" />
           </button>
         </div>
-        <Card>
-          <div className="portal">
-            {isOpen && (
-              <CreatePostModal
-                setIsOpen={setIsOpen}
-                onClose={() => setIsOpen(false)}
-              >
-                <div
-                  className="modal_portal"
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <h1>Create Post</h1>
-                <input type="textarea" />
-                <button onClose={() => setIsOpen(false)}>Close</button>
-              </CreatePostModal>
-            )}
-          </div>
-        </Card>
+        
       </div>
+      <CreatePostModal onConfirm={modalPostHandler} />
     </>
   );
 };
