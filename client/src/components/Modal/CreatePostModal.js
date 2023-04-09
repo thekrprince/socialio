@@ -3,11 +3,11 @@ import { createPortal } from "react-dom";
 import Card from "../UI/Card";
 import "./CreatePostModal.scss";
 
-const Backdrop = ({ onConfirm }) => {
-  return <div className="backdrop" onClick={onConfirm}></div>;
+const Backdrop = ({ setIsOpen }) => {
+  return <div className="backdrop" onClick={() => setIsOpen(false)}></div>;
 };
 
-const ModalOverlay = ({ onConfirm }) => {
+const ModalOverlay = ({ setIsOpen }) => {
   return (
     <Card className="modal">
       <header className="header">
@@ -17,7 +17,7 @@ const ModalOverlay = ({ onConfirm }) => {
         <input type="textarea" />
       </div>
       <footer className="action">
-        <button onClick={onConfirm}>Close</button>
+        <button onClick={() => setIsOpen(false)}>Close</button>
       </footer>
     </Card>
   );
@@ -52,11 +52,11 @@ const CreatePostModal = ({ setIsOpen, children, onClose }) => {
     return (
         <React.Fragment>
             {createPortal(
-                <Backdrop/>,
+                <Backdrop setIsOpen={setIsOpen}/>,
                 document.getElementById('backdrop-root')
             )}
             {createPortal(
-                <ModalOverlay/>,
+                <ModalOverlay setIsOpen={setIsOpen}/>,
                 document.getElementById('overlay-root')
                 )
             }
