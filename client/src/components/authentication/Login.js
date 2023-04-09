@@ -42,7 +42,7 @@ const Login = () => {
     .then((response) => {
       const token = response.data.token;
       sessionStorage.setItem('token', token);
-      navigate('/');
+      navigate('/dashboard');
     })
     .catch((err) => {
       toast("Invalid Credentials 🙅‍♀️", {
