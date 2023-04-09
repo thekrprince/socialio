@@ -23,32 +23,7 @@ const ModalOverlay = ({ setIsOpen }) => {
   );
 };
 
-const CreatePostModal = ({ setIsOpen, children, onClose }) => {
-  //   if (!setIsOpen) return null;
-  //   return createPortal(
-  //     <div className="backdrop" onClick={onClose}>
-  //       {children}
-  //     </div>,
-  //     document.getElementById("modal")
-  //   );
-//   <Card>
-//     {/* <div className="portal">
-//             {isOpen && (
-//               <CreatePostModal
-//                 setIsOpen={setIsOpen}
-//                 onClose={() => setIsOpen(false)}
-//               >
-//                 <div
-//                   className="modal_portal"
-//                   onClick={(e) => e.stopPropagation()}
-//                 />
-//                 <h1>Create Post</h1>
-//                 <input type="textarea" />
-//                 <button onClose={() => setIsOpen(false)}>Close</button>
-//               </CreatePostModal>
-//             )}
-//           </div> */}
-//   </Card>;
+const CreatePostModal = ({ setIsOpen }) => {
     return (
         <React.Fragment>
             {createPortal(
