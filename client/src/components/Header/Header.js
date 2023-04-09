@@ -3,14 +3,14 @@ import "./Header.scss";
 import icon_girl from "../../assets/icons-female-user.svg";
 import { useState } from "react";
 import CreatePostModal from "../Modal/CreatePostModal";
-import Card from "../UI/Card";
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const modalPostHandler = () => {
-    setIsOpen(true);
-  };
+  // const modalPostHandler = () => {
+  //   setIsOpen(true);
+  // };
 
   return (
     <>
@@ -30,7 +30,7 @@ const Header = () => {
         </div>
         
       </div>
-      <CreatePostModal onConfirm={modalPostHandler} />
+      {isOpen && <CreatePostModal setIsOpen={setIsOpen} />}
     </>
   );
 };
