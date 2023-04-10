@@ -14,7 +14,7 @@ const CreatePost = () => {
     return (
         <div>
           <div >Welcome to SocialIO</div>
-          <Link to="/">Logout</Link>
+          
         </div>
     );
 };

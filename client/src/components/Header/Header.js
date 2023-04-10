@@ -1,8 +1,9 @@
+import { useState } from "react";
+import {Link} from "react-router-dom";
+import CreatePostModal from "../Modal/CreatePostModal";
 import { BsSearch } from "react-icons/bs";
 import "./Header.scss";
 import icon_girl from "../../assets/icons-female-user.svg";
-import { useState } from "react";
-import CreatePostModal from "../Modal/CreatePostModal";
 
 
 const Header = () => {
@@ -27,6 +28,7 @@ const Header = () => {
           <button className="profile_button">
             <img src={icon_girl} alt="profile" className="profile_icon" />
           </button>
+          <Link to="/">Logout</Link>
         </div>
         
       </div>

@@ -16,7 +16,6 @@ const ModalOverlay = ({ setIsOpen }) => {
   const inputChangeHandler= (e) =>{
     setPostField(e.target.value);
   }
-  console.log(postField);
   const token = sessionStorage.getItem('token');
   // console.log(token);
   const postHandler = (e) => {

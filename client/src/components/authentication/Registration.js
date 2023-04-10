@@ -10,6 +10,7 @@ import { baseURL } from "../../API";
 
 const Registration = () => {
   const [inputChange, setInputChange] = useState({
+    id: "",
     name: "",
     email: "",
     password: "",
@@ -43,6 +44,7 @@ const Registration = () => {
     else{
       baseURL
       .post('/users', {
+        id: "id",
         name: inputChange.name,
         email: inputChange.email,
         password: inputChange.password,
