@@ -109,7 +109,7 @@ const Registration = () => {
                   />
                 </div>
                 <button className="button">Register</button>
-                <p>Have an account??&nbsp;<Link to="/login"> Log in now</Link></p>
+                <p>Have an account??&nbsp;<Link to="/"> Log in now</Link></p>
               </div>
             </div>
           </div>

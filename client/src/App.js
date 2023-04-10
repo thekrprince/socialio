@@ -8,7 +8,7 @@ import RootLayout from './components/Router/Root';
 
 const router = createBrowserRouter([
   
-  {path: "/login", element: <Login/>},
+  {path: "/", element: <Login/>},
   {path: "/registration", element: <Registration/>},
   {path: "/dashboard",
    element: <RootLayout/>,
@@ -20,6 +20,7 @@ const router = createBrowserRouter([
   ]);
 
 function App() {
+  
   return (
     <div className="App">
       <RouterProvider router={router}/>

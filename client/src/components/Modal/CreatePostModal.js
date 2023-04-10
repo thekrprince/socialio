@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import { createPortal } from "react-dom";
 import Card from "../UI/Card";
 import "./CreatePostModal.scss";
+import { baseURL } from "../../API";
 
 const Backdrop = ({ setIsOpen }) => {
   return <div className="backdrop" onClick={() => setIsOpen(false)}></div>;
 };
-
 
 
 const ModalOverlay = ({ setIsOpen }) => {
@@ -18,18 +18,18 @@ const ModalOverlay = ({ setIsOpen }) => {
   }
   console.log(postField);
   const token = sessionStorage.getItem('token');
-  console.log(token);
+  // console.log(token);
   const postHandler = (e) => {
     e.preventDefault();
-    axios.post("/post", {
-      text: postField
+    baseURL.post("/post", {
+      text: postField.toString(),
     },
     {
       headers: {
-        'Authorization': `Basic ${token}`
-      }
-    }
-    ).then((res) => {
+        "X-Auth-Token" : token,
+        "Content-Type": "application/json"
+      },
+    }).then((res) => {
       console.log(res);
     }).catch((err) => {
       console.log(err)

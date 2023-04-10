@@ -7,14 +7,14 @@ const CreatePost = () => {
     useEffect(() => {
         let token = sessionStorage.getItem('token');
         if(token === '' || token === null){
-            navigate('/login');
+            navigate('/');
         }
     },[]);
 
     return (
         <div>
           <div >Welcome to SocialIO</div>
-          <Link to="/login">Logout</Link>
+          <Link to="/">Logout</Link>
         </div>
     );
 };
