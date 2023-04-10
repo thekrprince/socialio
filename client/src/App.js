@@ -2,7 +2,7 @@ import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Login from './components/authentication/Login';
 import Registration from './components/authentication/Registration';
-import CreatePost from './components/posts/CreatePost';
+import Posts from './components/posts/Posts';
 import RootLayout from './components/Router/Root';
 
 
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
    element: <RootLayout/>,
    children: [
 
-     {path: "/dashboard", element: <CreatePost/>},
+     {path: "/dashboard", element: <Posts/>},
    ]
   }
   ]);
