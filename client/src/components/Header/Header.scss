@@ -5,12 +5,18 @@
     position: fixed;
     top: 0;
     background-color: var(--orange);
-    // background-size: cover;
-    // background-repeat: no-repeat;
     display: flex;
     align-items: center;
     border: none;
-    // margin-bottom: 0;
+}
+
+.logo{
+    width: 4%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 70px;
 }
 
 .search {
@@ -98,7 +104,7 @@
     // }
     
     .search {
-        margin: 15px 0px 10px 150px;
+        margin: 15px 0px 10px 80px;
     }
     
     .create_post_button{

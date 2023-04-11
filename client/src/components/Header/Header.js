@@ -4,6 +4,7 @@ import CreatePostModal from "../Modal/CreatePostModal";
 import { BsSearch } from "react-icons/bs";
 import "./Header.scss";
 import icon_girl from "../../assets/icons-female-user.svg";
+import logo from "../../assets/logo3.png";
 
 
 const Header = () => {
@@ -16,6 +17,7 @@ const Header = () => {
   return (
     <>
       <div className="header_outer">
+        <img src={logo} alt="logo" className="logo" />
         <input className="search" type="text" placeholder="Search..." />
         <BsSearch className="search_icon" size={25} />
         <div className="post_icon_manage">
