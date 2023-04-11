@@ -46,12 +46,12 @@
 
 .create_post_button {
     border: none;
-    background-color: #ed7b02;
+    background-color: var(--white);
     padding: 10px 10px;
     display: flex;
     cursor: pointer;
     border-radius: 16px;
-    color: white;
+    color: var(--orange);
     font-size: 8px;
     margin: 1.35rem;
     overflow-wrap: normal;
