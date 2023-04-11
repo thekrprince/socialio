@@ -73,7 +73,7 @@
     text-align: center;
     cursor: pointer;
     overflow-wrap: normal;
-    padding-right: 10px;
+    padding-right: 12px;
     // margin-left: 1.25rem;
     // margin-right: -50.25rem;
     // left: 300px;
@@ -82,10 +82,14 @@
 
 .profile_icon {
     width: 30px;
-    display: block;
-    position: absolute;
-    top: 23px;
-    right: 378px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -6px;
+    // padding-right: 16px;
+    // position: absolute;
+    // top: 23px;
+    // right: 378px;
 
 }
 
