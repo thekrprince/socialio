@@ -5,7 +5,6 @@ import AllPosts from './AllPosts';
 import "./Posts.scss";
 
 const Posts = ({setColor}) => {
-    console.log("setColor", setColor);
     const [allPostData, setAllPostData] = useState([]);
     const navigate = useNavigate();
 

@@ -4,6 +4,10 @@
     --orange: rgb(247, 41, 41);
 }
 
+.App {
+    min-height: 100vh;
+}
+
 .App.light {
     background-color: #fff;
 }

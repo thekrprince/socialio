@@ -1,3 +1,9 @@
+// html {
+//     height: 100%;
+// }
+// body{
+//     min-height: 100vh;
+// }
 /* Mobile view */
 .registration-container{
     display: flex;
@@ -5,6 +11,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    // width: 100%;
+    // height: 100%;
     
     // background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
     // background-image: linear-gradient(to bottom right, rgb(247, 41, 41), #d68229);

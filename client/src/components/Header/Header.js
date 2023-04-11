@@ -1,18 +1,15 @@
 import { useState } from "react";
 import {Link} from "react-router-dom";
 import CreatePostModal from "../Modal/CreatePostModal";
-import { BsSearch } from "react-icons/bs";
+import { BsSearch,  } from "react-icons/bs";
+import { IoIosNotifications } from "react-icons/io";
 import "./Header.scss";
 import icon_girl from "../../assets/icons-female-user.svg";
-import logo from "../../assets/logo3.png";
+import logo from "../../assets/logo4.png";
 
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-
-  // const modalPostHandler = () => {
-  //   setIsOpen(true);
-  // };
 
   return (
     <>
@@ -27,10 +24,11 @@ const Header = () => {
           >
             Create Post
           </button>
+          <IoIosNotifications size={20} className="notification_icon"/>
           <button className="profile_button">
             <img src={icon_girl} alt="profile" className="profile_icon" />
           </button>
-          <Link to="/">Logout</Link>
+          {/* <Link to="/">Logout</Link> */}
         </div>
         
       </div>

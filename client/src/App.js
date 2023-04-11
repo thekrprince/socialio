@@ -7,8 +7,6 @@ import RootLayout from './components/Router/Root';
 import { useState } from 'react';
 
 
-
-
 function App() {
   const [color, setColor] = useState('orange');
   const router = createBrowserRouter([
