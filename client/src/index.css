@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
+  /* background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229); */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -11,4 +11,5 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  /* background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229); ; */
 }

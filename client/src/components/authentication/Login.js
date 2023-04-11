@@ -8,11 +8,11 @@ import { useEffect, useState } from "react";
 import { baseURL } from "../../API";
 
 
-const Login = () => {
+const Login = ({setColor}) => {
 
   const navigate = useNavigate();
   
-
+  setColor('orange');
   const [fetchInputChangeValue, setFetchInputChangeValue] = useState({
     email: "",
     password: "",

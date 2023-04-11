@@ -3,3 +3,9 @@
     --regis-page-color: rgb(104, 73, 31)
 }
 
+.App.light {
+    background-color: #fff;
+}
+.App.orange{
+    background-image: linear-gradient(to right, rgb(247, 41, 41), #d68229);
+}

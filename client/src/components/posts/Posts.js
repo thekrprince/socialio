@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { baseURL } from '../../API';
 import AllPosts from './AllPosts';
-import "./CreatePost.scss";
+import "./Posts.scss";
 
-const Posts = () => {
+const Posts = ({setColor}) => {
+    console.log("setColor", setColor);
     const [allPostData, setAllPostData] = useState([]);
     const navigate = useNavigate();
 
@@ -29,6 +30,8 @@ const Posts = () => {
                 // console.log(res);
                 // console.log(res.data[0]);
                 setAllPostData(res.data);
+                setColor('light');
+
             }).catch((err) => {
                 console.log(err)
             });
@@ -39,8 +42,8 @@ const Posts = () => {
     // posts();
 
     return (
-        <div >
-          <section>
+        <div className='test' >
+          <section className='post'>
             {/* <p>Welcome</p> */}
             <AllPosts allPostData={allPostData}/>
           </section>
