@@ -25,6 +25,7 @@
 .logo{
     width: 11%;
     border-radius: 13px;
+    cursor:pointer;
     // display: flex;
     // justify-content: center;
     // align-items: center;
@@ -112,6 +113,7 @@
 @media screen and (min-width:800px) {
     .header_outer{
         height: 68px;
+        width: 1500px;
     }
 
     .header_container{
