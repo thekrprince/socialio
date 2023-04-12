@@ -20,8 +20,6 @@ const Posts = ({ setColor }) => {
   }, []);
 
   const token = sessionStorage.getItem("token");
-  // console.log(token);
-  // const posts = () =>{
   useEffect(() => {
     baseURL
       .get(
@@ -37,19 +35,15 @@ const Posts = ({ setColor }) => {
         )
       )
       .then((res) => {
-        // console.log(res);
-        // console.log(res.data[0]);
+        
         setAllPostData(res.data);
         setColor("light");
       })
       .catch((err) => {
         console.log(err);
       });
-    // console.log("allpostdata", allPostData);
   }, []);
-  // }
 
-  // posts();
 
   return (
     <>

@@ -33,7 +33,6 @@ const ModalOverlay = ({ setIsOpen }) => {
     }).catch((err) => {
       console.log(err)
     })
-  
   }
 
   return (
@@ -49,7 +48,6 @@ const ModalOverlay = ({ setIsOpen }) => {
         <button>Post</button>
       </footer>
       </form>
-      
     </Card>
   );
 };
@@ -69,5 +67,4 @@ const CreatePostModal = ({ setIsOpen }) => {
         </React.Fragment>
     );
 };
-
 export default CreatePostModal;

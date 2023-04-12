@@ -1,6 +1,6 @@
 import "./AllPosts.scss";
 
-const AllPosts = ({ id, name, text, date, allPostData }) => {
+const AllPosts = ({allPostData }) => {
   return allPostData.map((post) => {
     return (
       <div className="allPosts_outer">

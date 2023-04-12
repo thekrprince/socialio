@@ -10,19 +10,16 @@ import { useState } from 'react';
 function App() {
   const [color, setColor] = useState('orange');
   const router = createBrowserRouter([
-  
     {path: "/", element: <Login setColor={setColor}/>},
     {path: "/registration", element: <Registration/>},
     {path: "/dashboard",
      element: <RootLayout/>,
      children: [
-  
        {path: "/dashboard", element: <Posts setColor={setColor}/>},
      ]
     }
     ]);
     
-  
   return (
     <div className={`App ${color}`}>
       <RouterProvider router={router}/>
