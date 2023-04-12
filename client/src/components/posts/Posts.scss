@@ -1,11 +1,11 @@
 .post_outer_div {
     background-color: white;
     // margin-top: 0;
-    padding-top: 75px;;
+    padding: 89px 0 65px 0;
 }
 
 .side_profile {
-    height: 20vh;
+    height: 9vh;
     width: 100vw;
     position: fixed;
     bottom: 3;
@@ -18,4 +18,8 @@
     align-items: center;
     border: none;
     border-bottom: 1px solid #ccc;
+}
+
+.side_footer_profile{
+    padding: 0;
 }

@@ -59,15 +59,15 @@ const Posts = ({ setColor }) => {
         </section>
       </div>
       <footer className="side_profile">
-        <div>
+      <div className="side_footer_profile">
           <a href="/dashboard">
             <AiTwotoneHome />
           </a>
-          <a href="">
+          <a href="/">
             {" "}
             <CgProfile />
           </a>
-          <a href=""><CiCircleMore/></a> 
+          <a href="/"><CiCircleMore/></a> 
         </div>
       </footer>
     </>
