@@ -30,32 +30,26 @@
     }
     .side_footer_profile{
         width: 13%;
-        height: 30%;
-        display:flex;
+        height: 41%;
         background-color: var(--white);
         display: block;
-        // border: 1px solid red;
-        padding: 2rem 1rem;
-        margin: 0 4rem 29rem;
+        padding: 0rem 1rem;
+        margin: 0 99px 340px;
         vertical-align: middle;
     }
     .side_footer_profile a{
         color: var(--orange);
         display: flex;
         text-align: center;
-        padding: 50px;
-        font-size: 3rem;
+        padding: 20px;
+        font-size: 2rem;
     
     }
     .full_post_container{
         border: 1px solid black;
-        // margin: 1rem;
-        // padding: 2rem 2rem;
         vertical-align: middle;
         text-align: center;
 
     }
-    // .post {
-    //     text-align: center;
-    // }
+    
 }
