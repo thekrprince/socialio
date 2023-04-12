@@ -1,17 +1,18 @@
-import { Link, redirect, useNavigate } from "react-router-dom";
+import { Link, redirect, useNavigate} from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Registration.scss";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { SlPeople } from "react-icons/sl";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { baseURL } from "../../API";
 
 
-const Login = () => {
+const Login = ({setColor}) => {
 
   const navigate = useNavigate();
-
+  
+  setColor('orange');
   const [fetchInputChangeValue, setFetchInputChangeValue] = useState({
     email: "",
     password: "",
@@ -23,6 +24,10 @@ const Login = () => {
       [event.target.name]: [event.target.value],
     });
   };
+
+  useEffect(() => {
+    sessionStorage.clear();
+  },[]);
   
 
   const inputChangeHandler = (e) => {
@@ -35,8 +40,9 @@ const Login = () => {
      }
     )
     .then((response) => {
-      console.log("server response", response);
-      navigate('/posts');
+      const token = response.data.token;
+      sessionStorage.setItem('token', token);
+      navigate('/dashboard');
     })
     .catch((err) => {
       toast("Invalid Credentials 🙅‍♀️", {

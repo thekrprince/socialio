@@ -1,0 +1,144 @@
+// Mobile view 
+.header_outer {
+    // max-width: 100%;
+    height: 10vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background-color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.header_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55%;
+}
+
+.logo{
+    width: 11%;
+    border-radius: 13px;
+    cursor:pointer;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.search {
+    width: 59%;
+    height: 65%;
+    resize: vertical;
+    margin: 15px 0px 10px 10px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+.search_icon{
+    color: #ed7b02;
+    cursor: pointer;
+    position: relative;
+    left: -30px;
+
+}
+
+.post_icon_manage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.create_post_button {
+    border: none;
+    background-color: var(--white);
+    padding: 10px 10px;
+    display: flex;
+    cursor: pointer;
+    border-radius: 19px;
+    color: var(--orange);
+    font-size: 8px;
+    margin: 1.35rem;
+    overflow-wrap: normal;
+    z-index: 1;
+}
+
+.notification_icon {
+    color: var(--white);
+    padding-right: 10px;
+}
+
+.profile_button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: #ed7b02;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    overflow-wrap: normal;
+    margin: 10px;
+
+}
+
+.profile_icon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -6px;
+
+}
+
+.modal_portal{
+    width: clamp(50%, 700px, 90%);
+    height: min(50%, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 1rem;
+    background-color: #FF9300;
+    margin: auto;
+  }
+
+
+
+@media screen and (min-width:800px) {
+    .header_outer{
+        height: 68px;
+        width: 1500px;
+    }
+
+    .header_container{
+        margin: 0 22% 0 -130px;
+    }
+
+    .logo{
+        width: 6%;
+        border-radius: 20px;
+    }
+    
+    .search {
+        height: 86%;
+        margin: 15px 0px 10px 10px;
+    }
+    
+    .create_post_button{
+        font-size: 20px;
+    }
+    
+    .profile_button{
+       
+        margin-left: 20px;
+    }
+    
+}
+
