@@ -41,7 +41,7 @@ const Posts = ({setColor}) => {
     // posts();
 
     return (
-        <div className='test' >
+        <div className='post_outer_div' >
           <section className='post'>
             {/* <p>Welcome</p> */}
             <AllPosts allPostData={allPostData}/>
