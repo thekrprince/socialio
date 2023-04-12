@@ -3,8 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { baseURL } from "../../API";
 import AllPosts from "./AllPosts";
 import { AiTwotoneHome } from "react-icons/ai";
-import { CgProfile } from "react-icons/cg";
-import { CiCircleMore }  from "react-icons/ci";
+import { CgProfile, CgMoreO } from "react-icons/cg";
+import { BsFillPostcardFill } from "react-icons/bs";
+import { MdLocalPostOffice } from "react-icons/md";
 import "./Posts.scss";
 
 const Posts = ({ setColor }) => {
@@ -58,18 +59,21 @@ const Posts = ({ setColor }) => {
           <AllPosts allPostData={allPostData} />
         </section>
       </div>
-      {/* <footer className="side_profile">
       <div className="side_footer_profile">
-          <a href="/dashboard">
-            <AiTwotoneHome />
-          </a>
-          <a href="/">
-            {" "}
-            <CgProfile />
-          </a>
-          <a href="/"><CiCircleMore/></a> 
-        </div>
-      </footer> */}
+        <a href="/dashboard">
+          <AiTwotoneHome />
+        </a>
+        <a href="/">
+          <BsFillPostcardFill />
+        </a>
+        <a href="/"><MdLocalPostOffice/></a>
+        <a href="/">
+          <CgProfile />
+        </a>
+        <a href="/">
+          <CgMoreO />
+        </a>
+      </div>
     </>
   );
 };
