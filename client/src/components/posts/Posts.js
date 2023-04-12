@@ -58,7 +58,7 @@ const Posts = ({ setColor }) => {
           <AllPosts allPostData={allPostData} />
         </section>
       </div>
-      <footer className="side_profile">
+      {/* <footer className="side_profile">
       <div className="side_footer_profile">
           <a href="/dashboard">
             <AiTwotoneHome />
@@ -69,7 +69,7 @@ const Posts = ({ setColor }) => {
           </a>
           <a href="/"><CiCircleMore/></a> 
         </div>
-      </footer>
+      </footer> */}
     </>
   );
 };
