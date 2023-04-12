@@ -18,3 +18,44 @@
     color: var(--white);
 
 }
+
+@media screen and (min-width:800px){
+    .post_outer_div{
+        // margin: 0px 239px 0px 239px;
+        width: 50%;
+        display: inline-block;
+        border-right: 1px solid #ccc;
+        border-left: 1px solid #ccc;
+        vertical-align: middle;
+    }
+    .side_footer_profile{
+        width: 13%;
+        height: 30%;
+        display:flex;
+        background-color: var(--white);
+        display: block;
+        // border: 1px solid red;
+        padding: 2rem 1rem;
+        margin: 0 4rem 29rem;
+        vertical-align: middle;
+    }
+    .side_footer_profile a{
+        color: var(--orange);
+        display: flex;
+        text-align: center;
+        padding: 50px;
+        font-size: 3rem;
+    
+    }
+    .full_post_container{
+        border: 1px solid black;
+        // margin: 1rem;
+        // padding: 2rem 2rem;
+        vertical-align: middle;
+        text-align: center;
+
+    }
+    // .post {
+    //     text-align: center;
+    // }
+}

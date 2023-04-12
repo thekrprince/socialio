@@ -46,10 +46,9 @@ const Posts = ({ setColor }) => {
 
 
   return (
-    <>
+    <div className="full_post_container">
       <div className="post_outer_div">
         <section className="post">
-          {/* <p>Welcome</p> */}
           <AllPosts allPostData={allPostData} />
         </section>
       </div>
@@ -68,7 +67,7 @@ const Posts = ({ setColor }) => {
           <CgMoreO />
         </a>
       </div>
-    </>
+    </div>
   );
 };
 export default Posts;
