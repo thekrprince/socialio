@@ -1,11 +1,12 @@
 .allPosts_outer{
-    margin: 0 79px 0 64px;
-    border: 1px solid #ccc;
+    // margin: 0 79px 0 64px;
+    border-bottom: 1px solid #ccc;
+    width: 100vw;
 }
 
 .allPosts_container{
     justify-content: center;
     align-items: center;
-    text-align: start;
-    padding: 10px 0px;
+    text-align: center;
+    // padding: 10px 0px;
 }
