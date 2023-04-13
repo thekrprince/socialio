@@ -25,13 +25,13 @@ const AllPosts = ({ allPostData }) => {
                   <h3 className="font_details">{post.name}</h3>
                 </div>
                 <div className="time_dot">
-                  <span>.</span>
+                  <span className="span_time_dot">.</span>
                   {/* <p>
                     <span> . </span>
                     <span className="time_span"> {timeAgo}</span></p> */}
                 </div>
                 <div className="time">
-                  {timeAgo}
+                  <time>{timeAgo}</time>
                 </div>
               </div>
               <div role="none">

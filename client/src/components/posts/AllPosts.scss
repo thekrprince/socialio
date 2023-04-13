@@ -57,9 +57,25 @@ h3, p{
     padding-left: 4px;
     padding-right: 4px;
 }
-.time_span{
-    font-size:.75rem;
+.span_time_dot{
+    font-family: inherit;
+    word-wrap: break-word;
+    min-width: 0px;
+    color: inherit;
+    font: inherit;
+    white-space: inherit;
+    padding: 0;
 
+}
+
+.time{
+    flex-shrink: 0;
+    flex-direction: row;
+    align-items: stretch;
+    box-sizing:border-box;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 // .allPosts_outer{
 //     // margin: 0 79px 0 64px;
