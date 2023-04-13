@@ -2,13 +2,6 @@ h3, p{
     margin: 0
 }
 
-p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
 
 .post_article{
     padding: 1rem;
@@ -107,4 +100,14 @@ p{
     gap: 1.5rem;
     align-items: center;
     cursor: pointer;
+}
+
+@media screen and (min-width:800px){
+    .article_outer{
+        padding-left: 0.1rem;
+        text-align: start;
+    }
+    p{
+        padding-left: 7px;
+    }
 }

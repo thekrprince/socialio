@@ -60,19 +60,6 @@ const AllPosts = ({ allPostData }) => {
 
           </div>
         </article>
-        {/* <div className="allPosts_outer">
-          <div className="allPosts_container">
-            <div>
-              <p>{post.name}</p>
-            </div>
-            <div>
-              
-            </div>
-            <div>
-              <p>Date : {post.date}</p>
-            </div>
-          </div>
-        </div> */}
       </main>
     );
   });
