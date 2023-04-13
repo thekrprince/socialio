@@ -1,7 +1,7 @@
 .post_article{
     padding: 1rem;
     cursor: pointer;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid #ccc;
 }
 .flex {
     display: flex;
@@ -76,6 +76,37 @@ h3, p{
     display: flex;
     margin: 0;
     padding: 0;
+}
+.article_outer{
+    padding-left: 3rem;
+    margin-top: 1rem;
+}
+
+.article_content{
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height:1.25rem;
+    overflow-wrap: break-word;
+    margin-bottom: 0.5rem;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.interaction{
+    padding-left: 3rem;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+.items {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    cursor: pointer;
 }
 // .allPosts_outer{
 //     // margin: 0 79px 0 64px;
