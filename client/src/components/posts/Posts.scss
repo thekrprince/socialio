@@ -1,6 +1,6 @@
 .post_outer_div {
     background-color: white;
-    padding: 89px 0 65px 0;
+    padding: 89px 0 0 0;
 }
 
 .side_footer_profile {
@@ -20,6 +20,12 @@
 }
 
 @media screen and (min-width:764px){
+    .full_post_container{
+        // border: 1px solid black;
+        vertical-align: middle;
+        text-align: center;
+
+    }
     .post_outer_div{
         width: 50%;
         display: inline-block;
@@ -44,11 +50,6 @@
         font-size: 2rem;
     
     }
-    .full_post_container{
-        border: 1px solid black;
-        vertical-align: middle;
-        text-align: center;
-
-    }
+    
     
 }
