@@ -104,8 +104,12 @@ h3, p{
 
 .delete_icon {
     font-size: 15px;
-    color: red;
+    color: var(--orange);
 }
+.like_icon, .comment_icon{
+    color: var(--orange);
+}
+
 
 @media screen and (min-width:800px){
     .article_outer{

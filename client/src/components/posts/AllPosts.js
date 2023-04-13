@@ -2,6 +2,7 @@ import moment from "moment";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { FcLike } from "react-icons/fc";
 import { TfiCommentsSmiley } from "react-icons/tfi";
+import { AiOutlineHeart } from "react-icons/ai";
 import "./AllPosts.scss";
 
 const AllPosts = ({ allPostData }) => {
@@ -53,8 +54,8 @@ const AllPosts = ({ allPostData }) => {
           <div className="interaction">
             <div className="flex items-center ">
               <div className="items">
-                <div className="like"><FcLike/></div>
-                <div className="comment"><TfiCommentsSmiley/></div>
+                <div className="like_icon"><AiOutlineHeart/></div>
+                <div className="comment_icon"><TfiCommentsSmiley/></div>
               </div>
             </div>
 
