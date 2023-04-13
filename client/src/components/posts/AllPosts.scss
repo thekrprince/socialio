@@ -1,3 +1,15 @@
+h3, p{
+    margin: 0
+}
+
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 .post_article{
     padding: 1rem;
     cursor: pointer;
@@ -34,14 +46,8 @@
     font-size: 0.875rem;
     line-height: 1.25rem;
 }
-h3, p{
-    margin: 0
-}
 
 .time {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     line-height: 1rem;
     font-size: 0.75rem;
 }
@@ -78,7 +84,7 @@ h3, p{
     padding: 0;
 }
 .article_outer{
-    padding-left: 3rem;
+    padding-left: 0.3rem;
     margin-top: 1rem;
 }
 
@@ -89,15 +95,9 @@ h3, p{
     overflow-wrap: break-word;
     margin-bottom: 0.5rem;
 }
-p{
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-}
+
 .interaction{
-    padding-left: 3rem;
+    padding-left: 0.6rem;
     width: 100%;
     margin-top: 1rem;
     cursor: pointer;
