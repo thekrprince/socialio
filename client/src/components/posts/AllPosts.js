@@ -39,7 +39,7 @@ const AllPosts = ({ allPostData }) => {
                 </div>
               </div>
               <div role="none">
-                <div>
+                <div className="delete_icon">
                   <RiDeleteBin6Fill />
                 </div>
               </div>
