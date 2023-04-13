@@ -110,14 +110,23 @@ h3, p{
 }
 
 
-@media screen and (min-width:800px){
+@media screen and (min-width:764px){
     .article_outer{
         padding-left: 0.1rem;
         text-align: start;
     }
     p{
         padding-left: 7px;
-        width: 100vw;
-        max-width: 68ch;
+        width: 50rem;
+        max-width: 53ch;
     }
+}
+
+@media screen and (min-width:1200px){
+    p{
+        padding-left: 7px;
+        width: 50rem;
+        max-width: 100ch;
+    }
+
 }
