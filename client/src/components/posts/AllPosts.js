@@ -1,43 +1,20 @@
-import moment from "moment";
 import { RiDeleteBin6Fill } from "react-icons/ri";
 import { TfiCommentsSmiley } from "react-icons/tfi";
 import { AiOutlineHeart } from "react-icons/ai";
-import { baseURL } from "../../API";
 import "./AllPosts.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { postTimeFormating } from "../../utlis";
+import DeletePost from "./DeletePost";
 
-const AllPosts = ({ allPostData }) => {
-  const [deletePost, setDeletePost] = ([]);
-
-  const token = sessionStorage.getItem("token");
-
-  const deleteHandler = (id) => {
-    console.log("id", id);
-    baseURL.delete(`/post/${id}`, Object.assign(
-      {},
-      {
-      headers: {
-        "X-Auth-Token": token,
-        "content-type": "application/json",
-        }
-      }
-     ) 
-    ).then((res) => {
-      // setDeletePost(deletePost.filter((postdel) => {
-      //   return postdel.id !== id;
-      // })
-        console.log(res);
-      }).catch((err) => {
-          console.log(err);
-      });
-  }
+const AllPosts = ({ allPostData, getAllThePosts }) => {
+  const [getid, setGetId] = useState();
 
   return allPostData.map((post) => {
     var timeAgo = postTimeFormating(post);
+
     return (
-      <main>
-        <article className="post_article" key={post._id}>
+      <main key={post._id}>
+        <article className="post_article">
           <div>
             <div className="flex items-center ">
               <div role="none" className="only_names">
@@ -55,7 +32,8 @@ const AllPosts = ({ allPostData }) => {
               </div>
               <div role="none">
                 <div className="delete_icon">
-                  <RiDeleteBin6Fill onClick={deleteHandler(post._id)} />
+                  <RiDeleteBin6Fill onClick={() => setGetId(post._id)} />
+                  {getid && <DeletePost id={getid} getAllThePosts={getAllThePosts}/>} 
                 </div>
               </div>
             </div>

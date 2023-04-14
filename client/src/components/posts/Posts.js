@@ -20,28 +20,31 @@ const Posts = ({ setColor }) => {
   }, []);
 
   const token = sessionStorage.getItem("token");
-  useEffect(() => {
+  const getAllThePosts = () => {
     baseURL
-      .get(
-        "/post",
-        Object.assign(
-          {},
-          {
-            headers: {
-              "X-Auth-Token": token,
-              "content-type": "application/json",
-            },
-          }
-        )
+    .get(
+      "/post",
+      Object.assign(
+        {},
+        {
+          headers: {
+            "X-Auth-Token": token,
+            "content-type": "application/json",
+          },
+        }
       )
-      .then((res) => {
-        
-        setAllPostData(res.data);
-        setColor("light");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    )
+    .then((res) => {
+      
+      setAllPostData(res.data);
+      setColor("light");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  };
+  useEffect(() => {
+    getAllThePosts();
   }, []);
 
 
@@ -49,7 +52,7 @@ const Posts = ({ setColor }) => {
     <div className="full_post_container">
       <div className="post_outer_div">
         <section className="post">
-          <AllPosts allPostData={allPostData} />
+          <AllPosts allPostData={allPostData} getAllThePosts={getAllThePosts} />
         </section>
       </div>
       <div className="side_footer_profile">
