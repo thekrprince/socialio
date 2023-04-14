@@ -5,6 +5,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { baseURL } from "../../API";
 import "./AllPosts.scss";
 import { useEffect } from "react";
+import { postTimeFormating } from "../../utlis";
 
 const AllPosts = ({ allPostData }) => {
   const [deletePost, setDeletePost] = ([]);
@@ -32,25 +33,8 @@ const AllPosts = ({ allPostData }) => {
       });
   }
 
-  
-
   return allPostData.map((post) => {
-    let date = new Date();
-    var dts = new Date(post.date);
-    var split_Values = dts.toLocaleString().split(" ");
-    var dates = split_Values[0];
-    var times = split_Values[1];
-    var then = dates + times;
-    var ms = moment
-      .utc(
-        moment(date, "DD/MM/YYYY HH:mm:ss").diff(
-          moment(then, "DD/MM/YYYY HH:mm:ss")
-        )
-      )
-      .format("HH:mm:ss");
-    var d = moment.duration(ms);
-    var timeAgo = d.humanize();
-
+    var timeAgo = postTimeFormating(post);
     return (
       <main>
         <article className="post_article" key={post._id}>
